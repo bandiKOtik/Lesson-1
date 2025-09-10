@@ -1,0 +1,27 @@
+using static System.Console;
+namespace Lesson1
+{
+    internal class Ex1
+    {
+        static void Main()
+        {
+            int a = 1;
+            int b = 2;
+            int c = 3;
+            float health = 100;
+            float damage = 10;
+            bool isActive = false;
+            string message = "Hello World!";
+            char ch = 'a';
+            string values = "1234,10";
+            float valuesFloat = 123.456f;
+
+            c = a + b + (int)health; WriteLine($"int + float: {c}");
+            damage = a + b + damage; WriteLine($"float + int: {damage}");
+
+            WriteLine($"float value before parsing: {valuesFloat}");
+            health = valuesFloat + float.Parse(values);
+            WriteLine($"after: {health}");
+        }
+    }
+}
