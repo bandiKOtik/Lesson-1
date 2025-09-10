@@ -1,0 +1,35 @@
+using static System.Console;
+namespace Lesson1
+{
+    internal class Ex2
+    {
+        static void Main()
+        {
+            WriteLine("Допустим, что вы умный образованный человек, который не пишет бредик в анкетах...");
+            string name, age, number, email;
+
+            Write("Введите своё имя: ");
+            name = ReadLine(); CheckOnNull(name);
+
+            Write("Введите свой возраст: ");
+            age = ReadLine(); CheckOnNull(age);
+
+            Write("Введите номер телефона: ");
+            number = ReadLine(); CheckOnNull(number);
+
+            Write("Введите почту: ");
+            email = ReadLine(); CheckOnNull(email);
+
+            WriteLine($"Имя: {name} \nВозраст: {age} \nНомер: {number} \nПочта: {email}");
+        }
+
+        static void CheckOnNull(string str)
+        {
+            if (str == null || str == "" || str == " ")
+            {
+                WriteLine("Данные должны быть заполнены!");
+                return;
+            }
+        }
+    }
+}
