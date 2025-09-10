@@ -1,0 +1,24 @@
+using static System.Console;
+namespace Lesson1
+{
+    internal class Ex3
+    {
+        static void Main()
+        {
+            {
+                Write("Какова длина здания?: ");
+                int storageLength = int.Parse(ReadLine());
+
+                Write("Какова ширина здания?: ");
+                int storageWidth = int.Parse(ReadLine());
+
+                Write("Какова площать одной коробки?: ");
+                float boxP = int.Parse(ReadLine());
+
+                int resultBoxes = (int)((storageLength * storageWidth) / boxP);
+                WriteLine($"Площадь здания: {storageLength * storageWidth}");
+                WriteLine($"Результат: {resultBoxes} коробок поместится");
+            }
+        }
+    }
+}
